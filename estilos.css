@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@media all {
+
+    body {
+        background: #a29bfe;
+        color: #FFF;
+        font-family: "Kodchasan", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        line-height: 25px;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 90vh;
+        overflow: hidden;
+    }
+
+    .coracao {
+        position: relative;
+        width: 100px;
+        height: 90px;
+        background-color: red;
+        margin: 50px auto;
+        animation: pulse 1s infinite;
+    }
+
+    .coracao::before,
+    .coracao::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 90px;
+        background-color: red;
+        border-radius: 50%;
+    }
+
+    .coracao::before {
+        top: -45px;
+        left: 0;
+    }
+
+    .coracao::after {
+        top: 0;
+        left: 45px;
+    }
+
+    .agradecimento p {
+        max-width: 640px;
+        font-size: 18px;
+    }
+
+    .agradecimento .contribuintes {
+        margin-top: 35px;
+    }
+
+    .agradecimento .contribuintes p {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .agradecimento .contribuintes p#nomes {
+        font-size: 32px;
+    }
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) rotate(-45deg);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(-45deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(-45deg);
+    }
+}
